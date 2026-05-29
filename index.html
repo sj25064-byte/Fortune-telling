@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>今日の占い</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; padding-top:100px;">
+
+  <h1>今日の運勢</h1>
+
+  <button onclick="uranai()">占う</button>
+
+  <h2 id="result" style="margin-top:30px;"></h2>
+
+  <script>
+    function uranai() {
+      const results = ["大吉", "中吉", "小吉", "凶", "大凶"];
+      const msg = results[Math.floor(Math.random() * results.length)];
+      document.getElementById("result").innerText = msg;
+    }
+  </script>
+
+</body>
+</html>
